@@ -1,0 +1,53 @@
+/* Main stylesheet: one design shared by all four pages. */
+:root { color-scheme: light; --navy:#12344b; --teal:#116b64; --cream:#f5f9fa; --ink:#183042; --line:#b8cbd4; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+/* Background image is an original SVG illustration in the Images folder. */
+body { margin:0; color:var(--ink); font: 1rem/1.65 Arial, Helvetica, sans-serif; background:linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('../Images/earth-background.png') center top/cover fixed no-repeat; }
+a { color:#075d78; } a:hover { text-decoration-thickness:3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid #c6680e; outline-offset:3px; }
+.skip-link { position:absolute; left:12px; top:-80px; background:white; padding:12px; z-index:9; }
+.skip-link:focus { top:12px; }
+/* Class selector used to style the website header without affecting other header elements. */
+.site-header { background:var(--navy); color:white; }
+.header-inner { max-width:1100px; margin:auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+.brand { color:white; font-size:1.25rem; font-weight:bold; text-decoration:none; }
+.brand span { font-size:.78rem; display:block; font-weight:normal; letter-spacing:.03em; }
+nav { display:flex; gap:8px; flex-wrap:wrap; }
+nav a { color:white; padding:9px 12px; border-radius:5px; text-decoration:none; font-weight:bold; }
+nav a:hover, nav a[aria-current='page'] { background:#d7f3e8; color:#12344b; }
+/* .container is reused to center page content at a readable line length. */
+.container { max-width:1100px; margin:auto; padding:0 24px; }
+h1,h2,h3 { line-height:1.25; color:var(--navy); } h1 { font-size: 2.5rem; margin: .3em 0; } h1 { font-size: 2rem; }
+.eyebrow { color:#075d57; text-transform:uppercase; font-size:.85rem; letter-spacing:.12em; font-weight:bold; }
+.lead { font-size:1.1rem; }
+.hero, .panel, .card, .featured-figure, .page-intro { background:rgba(255,255,255,.96); border:1px solid var(--line); border-radius:12px; box-shadow:0 3px 12px #12344b10; }
+/* The hero class styles the main introduction without changing other page sections. */
+.hero { display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:center; padding:36px; }
+.hero figure { margin:0; } img { max-width:100%; height:auto; display:block; }
+figcaption { margin-top:9px; font-size:.89rem; }
+.button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.button, button { display:inline-block; background:var(--teal); border:2px solid var(--teal); padding:11px 17px; border-radius:6px; color:white; font:inherit; font-weight:bold; text-decoration:none; cursor:pointer; }
+.button:hover, button:hover { background:#084d47; color:white; }
+.button-outline { color:var(--teal); background:white; } .button-outline:hover { color:white; }
+.panel, .page-intro { padding:28px 32px; margin-top:22px; }
+.cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-top:22px; }
+/* The card class styles individual content boxes without affecting other HTML articles. */
+.card { padding:25px; }
+.featured-figure { margin:22px 0; padding:22px; }
+.featured-figure img { width:100%; max-height:450px; object-fit:contain; }
+.table-scroll { overflow-x:auto; } table { width:100%; border-collapse:collapse; min-width:570px; } caption { text-align:left; padding-bottom:8px; font-weight:bold; }
+th,td { border:1px solid #a8c0cb; padding:12px; text-align:left; vertical-align:top; }
+thead { background:#d8eee9; } tbody tr:nth-child(even) { background:#edf5f7; }
+.action-list li { padding:5px 0 5px 8px; }
+fieldset { border:1px solid #9dbac3; padding:16px; border-radius:8px; margin:16px 0; } legend { font-weight:bold; }
+/* .check-option styles only pledge selections, not navigation links or other labels. */
+.check-option { display:block; margin:12px 0; padding:5px 0; cursor:pointer; }
+.check-option input { width:18px; height:18px; vertical-align:middle; accent-color:var(--teal); }
+/* #pledge-message is unique because only the action form displays a status message. */
+#pledge-message { font-weight:bold; min-height:1.5em; color:#16594b; }
+.sources li { margin:.45em 0; overflow-wrap:anywhere; }
+.site-footer { padding:24px; text-align:center; background:var(--navy); color:white; } .site-footer p { margin:4px; } .site-footer a { color:#b4f2e0; }
+/* Responsive design: stack content and navigation on phones. */
+@media (max-width:720px) { .hero,.cards { grid-template-columns:1fr; } .hero { padding:24px; } .header-inner { align-items:flex-start; } nav { width:100%; } nav a { padding:8px 9px; } .panel,.page-intro { padding:22px; } body { background-attachment:scroll; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Kyle Myers">
+  <meta name="description" content="Discover practical climate actions and make a personal pledge.">
+  <meta name="keywords" content="climate action, energy, waste">
+  <title>Climate Action | Take Action</title>
+  <link rel="stylesheet" href="Css/Default_styles.css">
+  <script src="Scripts/Javascript.js" defer></script>
+</head>
+<body>
+  <!-- Skip link helps keyboard users jump to the main content. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">🌎 Climate Action <span>Protect Our Planet</span></a>
+      <!-- The same navigation appears on every page. -->
+      <nav aria-label="Main navigation"><a href="index.html">Home</a>
+<a href="causes.html">Causes & Effects</a>
+<a href="action.html" aria-current="page">Take Action</a>
+<a href="policy.html">Policy & Accessibility</a></nav>
+    </div>
+  </header>
+  <main id="main-content" class="container">
+    <section class="page-intro"><p class="eyebrow">Your Next Step</p><h1>Simple Ways to Help</h1><p>No single action solves climate change, but people can make choices that reduce energy use and greenhouse gas emissions. Start with a step that fits your situation, then build new habits over time (<a href="https://www.epa.gov/climate-change/what-you-can-do-about-climate-change">U.S. EPA, n.d.</a>).</p></section>
+    <section class="panel"><h2>Five Everyday Actions</h2><ol class="action-list"><li>Turn off lights and electronics when they are not in use.</li><li>Choose efficient lighting and appliances when practical.</li><li>Walk, bike, carpool, or use public transportation when possible.</li><li>Reduce food waste and reuse items before replacing them.</li><li>Share reliable climate information with friends and family.</li></ol></section>
+    <section class="panel" aria-labelledby="pledge-title"><h2 id="pledge-title">Make a Climate Action Pledge</h2><p>Select one or more actions you would like to try. This demo does not collect or transmit personal information.</p>
+      <!-- Labels are associated with each checkbox to improve accessibility. -->
+      <form id="pledge-form" aria-label="Make a Climate Action Pledge"><fieldset><legend>My climate action goals</legend><label class="check-option"><input type="checkbox" name="pledge" value="Save energy at home"> Save energy at home</label><label class="check-option"><input type="checkbox" name="pledge" value="Reduce waste"> Reduce waste</label><label class="check-option"><input type="checkbox" name="pledge" value="Choose lower-emission transportation"> Choose lower-emission transportation</label></fieldset><button type="submit">Submit My Pledge</button><p id="pledge-message" role="status" aria-live="polite"></p></form>
+    </section>
+    <figure class="featured-figure"><img src="Images/global-temperature.png" alt="Graph showing rising global temperatures from 1850 to 2020." width="900" height="420"><figcaption>Global temperature data visualization. Image credit: NASA <a href="https://science.nasa.gov/earth/explore/earth-indicators/global-temperature/">View NASA global temperature data</a>.</figcaption></figure>
+  </main>
+    <footer class="site-footer">
+    <p>Climate Action: Protect Our Planet • CIS133DA student project • Kyle Myers</p>
+    <p><a href="policy.html">Policy, accessibility & sources</a></p>
+  </footer>
+</body>
+</html>
